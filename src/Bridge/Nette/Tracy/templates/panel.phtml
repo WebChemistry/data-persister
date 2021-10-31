@@ -1,0 +1,23 @@
+<style class="tracy-debug">
+	#tracy-debug table.dataPersisterTable .yes td {
+		background: #BDE678;
+	}
+	#tracy-debug table.dataPersisterTable .no td {
+		background: #e67878 ;
+	}
+</style>
+<h1>Persisted data</h1>
+<table class="tracy-sortable dataPersisterTable">
+	<tr>
+		<th>#</th>
+		<th>Type</th>
+		<th>Used persisters</th>
+	</tr>
+	<?php foreach ($stream ?? [] as $i => $item): ?>
+	<tr class="<?= $item[0] ? 'yes' : 'no' ?>">
+		<td><?= $i + 1 ?></td>
+		<td><?= $item[1] ?></td>
+		<td>[<?= implode(', ', $item[2]) ?>]</td>
+	</tr>
+	<?php endforeach; ?>
+</table>

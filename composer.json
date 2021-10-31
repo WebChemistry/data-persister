@@ -1,0 +1,11 @@
+{
+	"name": "webchemistry/data-persister",
+	"autoload": {
+		"psr-4": {
+			"WebChemistry\\DataPersister\\": "src"
+		}
+	},
+	"require": {
+		"php": ">= 8.0"
+	}
+}
